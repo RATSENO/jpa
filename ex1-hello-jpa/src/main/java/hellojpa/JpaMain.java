@@ -16,13 +16,14 @@ public class JpaMain {
         tx.begin();
 
         try {
-            //DB에서 조회하고
-            Member findMember = em.find(Member.class, 101L);
-            //조회 후 영속성 컨텍스트 1차캐시에 있는 것을 조회
-            Member findMember2 = em.find(Member.class, 101L);
-            //쿼리는 한번만 나간다.
 
-            System.out.println("result=" + (findMember == findMember2));
+            Member member1 = new Member(150L, "A");
+            Member member2 = new Member(160L, "B");
+
+            em.persist(member1);
+            em.persist(member2);
+
+            System.out.println("==========================");
 
             tx.commit();
         } catch (Exception e) {

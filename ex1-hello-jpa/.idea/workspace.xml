@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2726c813-ce49-4809-9394-e3157b9d567a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hellojpa/JpaMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hellojpa/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578983780537</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="영속 엔티티의 동일성 보장">
+      <created>1578983969571</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1578983969571</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,6 +123,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="영속성 컨텍스트 테스트" />
     <MESSAGE value="영속성 컨텍스트 테스트&#10;1차 캐시에 있는것부터 조회" />
-    <option name="LAST_COMMIT_MESSAGE" value="영속성 컨텍스트 테스트&#10;1차 캐시에 있는것부터 조회" />
+    <MESSAGE value="영속 엔티티의 동일성 보장" />
+    <option name="LAST_COMMIT_MESSAGE" value="영속 엔티티의 동일성 보장" />
   </component>
 </project>
