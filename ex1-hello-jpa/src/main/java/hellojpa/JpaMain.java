@@ -22,6 +22,8 @@ public class JpaMain {
             Member findMember2 = em.find(Member.class, 101L);
             //쿼리는 한번만 나간다.
 
+            System.out.println("result=" + (findMember == findMember2));
+
             tx.commit();
         } catch (Exception e) {
             tx.rollback();
