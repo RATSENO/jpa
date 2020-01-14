@@ -4,8 +4,6 @@
     <list default="true" id="2726c813-ce49-4809-9394-e3157b9d567a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hellojpa/JpaMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hellojpa/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hellojpa/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578983969571</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="엔티티 등록&#10;트랙잭션을 지원하는 쓰기 지원">
+      <created>1578984780837</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1578984780837</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,6 +129,7 @@
     <MESSAGE value="영속성 컨텍스트 테스트" />
     <MESSAGE value="영속성 컨텍스트 테스트&#10;1차 캐시에 있는것부터 조회" />
     <MESSAGE value="영속 엔티티의 동일성 보장" />
-    <option name="LAST_COMMIT_MESSAGE" value="영속 엔티티의 동일성 보장" />
+    <MESSAGE value="엔티티 등록&#10;트랙잭션을 지원하는 쓰기 지원" />
+    <option name="LAST_COMMIT_MESSAGE" value="엔티티 등록&#10;트랙잭션을 지원하는 쓰기 지원" />
   </component>
 </project>

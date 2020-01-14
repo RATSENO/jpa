@@ -17,11 +17,8 @@ public class JpaMain {
 
         try {
 
-            Member member1 = new Member(150L, "A");
-            Member member2 = new Member(160L, "B");
-
-            em.persist(member1);
-            em.persist(member2);
+            Member member1 = em.find(Member.class, 150L);
+            member1.setName("ZZZZZ");
 
             System.out.println("==========================");
 
