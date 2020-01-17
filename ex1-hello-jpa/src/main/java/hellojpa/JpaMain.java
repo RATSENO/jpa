@@ -24,7 +24,7 @@ public class JpaMain {
 
             Member member = new Member();
             member.setUsername("memberA");
-            member.setTeam(team);
+            member.changeTeam(team);
             em.persist(member);
 
             //team.getMembers().add(member);
