@@ -18,8 +18,6 @@ public class JpaMain {
         tx.begin();
 
         try {
-            Order order = em.find(Order.class, 1L);
-            Long memberId = order.getMemberId();
 
             tx.commit();
 
