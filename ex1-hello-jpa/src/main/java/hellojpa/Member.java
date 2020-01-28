@@ -19,6 +19,10 @@ public class Member {
     // 다대일 양방향을 사용하자
     private Team team;
 
+    @OneToOne
+    @JoinColumn(name = "LOCKER_ID")
+    private Locker locker;
+
     public Long getId() {
         return id;
     }
