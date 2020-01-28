@@ -13,6 +13,12 @@ public class Member {
     @Column(name = "USERNAME")
     private String username;
 
+    @ManyToOne
+    @JoinColumn(name = "TEAM_ID", insertable = false, updatable = false)
+    //읽기 전용 필드를 사용해서 양방향 처럼 사용하는 방법
+    // 다대일 양방향을 사용하자
+    private Team team;
+
     public Long getId() {
         return id;
     }
