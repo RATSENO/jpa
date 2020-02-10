@@ -1,4 +1,10 @@
 ### Java ###
 # Compiled class file
 *.class
-!/.idea/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
