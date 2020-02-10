@@ -19,16 +19,23 @@ public class JpaMain {
 
         try {
 
-            Member member = new Member();
-            member.setCreatedBy("Kim");
-            member.setCreatedDate(LocalDateTime.now());
-            member.setUsername("user1");
+            Member member1 = new Member();
+            member1.setUsername("member1");
+            em.persist(member1);
 
-            em.persist(member);
+            Member member2 = new Member();
+            member2.setUsername("member2");
+            em.persist(member2);
 
-            em.flush();;
+            em.flush();
             em.clear();
 
+            Member m1 = em.find(member1.getClass(), member1.getId());
+            //Member m2 = em.find(member2.getClass(), member2.getId());
+            Member m2 = em.getReference(member2.getClass(), member2.getId());
+
+            logic(m1, m2);
+            
             tx.commit();
 
         } catch (Exception e) {
@@ -38,4 +45,9 @@ public class JpaMain {
         }
         emf.close();
     }
+
+    private static void logic(Member m1, Member m2) {
+        System.out.println("m1 == m2 :" + (m1.getClass() == m2.getClass()));
+    }
+
 }

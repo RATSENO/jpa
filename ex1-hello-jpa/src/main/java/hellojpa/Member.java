@@ -22,15 +22,6 @@ public class Member extends BaseEntity{
     // 다대일 양방향을 사용하자
     private Team team;
 
-    @OneToOne
-    @JoinColumn(name = "LOCKER_ID")
-    private Locker locker;
-
-    @ManyToMany
-    @JoinTable(name = "MEMBER_PRODUCT")
-    private List<Product> products = new ArrayList<>();
-
-
     public Long getId() {
         return id;
     }
@@ -45,5 +36,13 @@ public class Member extends BaseEntity{
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public Team getTeam() {
+        return team;
+    }
+
+    public void setTeam(Team team) {
+        this.team = team;
     }
 }
