@@ -19,32 +19,17 @@ public class JpaMain {
 
         try {
 
-            Team team = new Team();
-            team.setName("team1");
-            em.persist(team);
+            Child child1 = new Child();
+            Child child2 = new Child();
 
-            Team team2 = new Team();
-            team2.setName("team2");
-            em.persist(team2);
+            Parent parent = new Parent();
+            parent.addChild(child1);
+            parent.addChild(child2);
 
-            Member member1 = new Member();
-            member1.setUsername("member1");
-            member1.setTeam(team);
-            em.persist(member1);
-
-            Member member2 = new Member();
-            member2.setUsername("member2");
-            member2.setTeam(team2);
-            em.persist(member2);
-
-            em.flush();
-            em.clear();
-
-            List<Member> members = em.createQuery("select m from Member m", Member.class).getResultList();
-            //즉시로딩 문제점
-            //SQL : select * from Member
-            //Team이 조인으로 걸려있기때문에 다시 쿼리가 나간다.
-            //SQL : select* from Team where TEAM_ID = ?????
+            em.persist(parent);
+            //@OneToMany(mappedBy = "parent", cascade = CascadeType.ALL)
+            //em.persist(child1);
+            //em.persist(child2);
 
             tx.commit();
 
