@@ -32,12 +32,11 @@ public class JpaMain {
             em.flush();
             em.clear();
 
-            Member member = em.find(Member.class, member1.getId());
-            System.out.println( member.getTeam().getClass());
-
-            System.out.println("============================");
-            member.getTeam().getName();
-            System.out.println("============================");
+            List<Member> members = em.createQuery("select m from Member m", Member.class).getResultList();
+            //즉시로딩 문제점
+            //SQL : select * from Member
+            //Team이 조인으로 걸려있기때문에 다시 쿼리가 나간다.
+            //SQL : select* from Team where TEAM_ID = ?????
 
             tx.commit();
 
