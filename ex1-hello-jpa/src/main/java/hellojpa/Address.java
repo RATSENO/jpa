@@ -9,8 +9,6 @@ public class Address {
 
     private String city;
     private String street;
-
-    @Column(name = "ZIPCODE")
     private String zipCode;
 
     public Address() {
