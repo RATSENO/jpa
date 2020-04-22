@@ -9,3 +9,5 @@
 *.ipr
 out/
 /target/
+target/classes/META-INF/
+target/generated-sources/
