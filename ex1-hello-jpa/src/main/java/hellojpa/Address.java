@@ -59,4 +59,5 @@ public class Address {
     public int hashCode() {
         return Objects.hash(city, street, zipCode);
     }
+
 }
