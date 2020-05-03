@@ -11,3 +11,4 @@ out/
 /target/
 target/classes/META-INF/
 target/generated-sources/
+src/test/
