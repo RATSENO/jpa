@@ -1,0 +1,13 @@
+### Java ###
+# Compiled class file
+*.class
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+/target/
+target/classes/META-INF/
+target/generated-sources/
