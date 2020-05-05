@@ -24,20 +24,12 @@ public class JpaMain {
 
             em.persist(member);
 
-            Member member2 = new Member();
-            member2.setUsername("member2");
-            member2.setAge(10);
-
-            em.persist(member2);
 
             TypedQuery<Member> query = em.createQuery("select m from Member m", Member.class);
-            List<Member> resultList = query.getResultList();
-            for (Member member1 : resultList) {
-                System.out.println(member1);
-            }
 
+            Member singleResult = query.getSingleResult();
 
-            em.flush();
+            System.out.println(singleResult);
 
             tx.commit();
 
