@@ -26,7 +26,7 @@ public class JpaMain {
             em.flush();
             em.clear();
 
-            em.createQuery("select o.address from Order o ", Address.class)
+            em.createQuery("select m.username, m.age from Member m ")
                     .getResultList();
 
 
