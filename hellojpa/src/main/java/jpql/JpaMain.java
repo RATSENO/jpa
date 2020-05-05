@@ -26,7 +26,7 @@ public class JpaMain {
             em.flush();
             em.clear();
 
-            List<Team> list = em.createQuery("select t from Member m join m.team t", Team.class)
+            em.createQuery("select o.address from Order o ", Address.class)
                     .getResultList();
 
 
