@@ -1,9 +1,6 @@
 package jpql;
 
 import javax.persistence.*;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
 import java.util.List;
 
 public class JpaMain {
@@ -26,9 +23,12 @@ public class JpaMain {
             em.flush();
             em.clear();
 
-            em.createQuery("select m.username, m.age from Member m ")
+            List resultList = em.createQuery("select m.username, m.age from Member m ")
                     .getResultList();
-
+            Object o = resultList.get(0);
+            Object[] result = (Object[]) o;
+            System.out.println(result[0]);
+            System.out.println(result[1]);
 
             tx.commit();
 
