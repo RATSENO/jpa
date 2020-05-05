@@ -18,12 +18,11 @@ public class JpaMain {
 
         try {
 
-            Member member = new Member();
+/*            Member member = new Member();
             member.setUsername("member1");
             member.setAge(10);
 
-            em.persist(member);
-
+            em.persist(member);*/
 
             TypedQuery<Member> query = em.createQuery("select m from Member m", Member.class);
 
@@ -34,6 +33,7 @@ public class JpaMain {
             tx.commit();
 
         } catch (Exception e) {
+            e.printStackTrace();
             tx.rollback();
         } finally {
             em.close();
